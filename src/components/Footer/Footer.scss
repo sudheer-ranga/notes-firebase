@@ -1,0 +1,51 @@
+.footer {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 100%;
+  padding: 25px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  .btn-add-note,
+  .btn-create-note,
+  .btn-cancel {
+    &:hover {
+      background: #608b9a;
+      color: #fff;
+    }
+  }
+
+  .btn-create-note,
+  .btn-cancel {
+    width: 100px;
+  }
+
+  .btn-create-note {
+    margin: 0 20px;
+  }
+
+  .btn-add-note {
+    background: transparent;
+    border: 1px solid #84aebd;
+    color: #84aebd;
+    width: 200px;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+      span {
+        color: #fff;
+      }
+    }
+
+    .span {
+      font-size: 14px;
+      margin-right: 5px;
+      line-height: 1;
+    }
+  }
+}

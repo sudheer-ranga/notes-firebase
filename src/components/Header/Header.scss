@@ -1,0 +1,27 @@
+.app-heading {
+  color: #7e0892;
+}
+
+.header {
+  position: relative;
+
+  .header-user-info {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      right: 25px;
+      top: 0;
+    }
+
+    p {
+      color: #333;
+      margin: 0 0 10px;
+      font-size: 14px;
+
+      span {
+        color: #ff9800;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}

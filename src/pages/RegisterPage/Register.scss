@@ -1,0 +1,50 @@
+.register-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  .register-center-block {
+    background: #fff;
+    position: absolute;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .input-block {
+    display: block;
+    margin-bottom: 30px;
+
+    input {
+      height: 50px;
+      width: 350px;
+    }
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+
+    &:hover {
+      background: #608b9a;
+      color: #fff;
+    }
+  }
+
+  .page-link-block {
+    text-align: right;
+    margin-top: 15px;
+
+    .page-link {
+      color: #336699;
+
+      &:hover {
+        color: #608b9a;
+      }
+    }
+  }
+}
