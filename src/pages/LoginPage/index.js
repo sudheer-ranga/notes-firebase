@@ -9,7 +9,9 @@ const LoginPage = props => {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const login = async () => {
+  const login = async event => {
+    event.preventDefault();
+
     if (!email || !password) {
       return;
     }
@@ -30,7 +32,11 @@ const LoginPage = props => {
   return (
     <div className="login-wrapper">
       {!isLoading ? (
-        <div className="login-center-block text-center">
+        <form
+          name="loginForm"
+          onSubmit={login}
+          className="login-center-block text-center"
+        >
           <label className="input-block">
             <input
               type="email"
@@ -56,7 +62,7 @@ const LoginPage = props => {
               Register
             </Link>
           </div>
-        </div>
+        </form>
       ) : (
         <div className="loader" />
       )}

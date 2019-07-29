@@ -11,10 +11,6 @@ const TodoItem = props => {
   const removeItemFromNote = itemId => {
     const filteredTodos = todo.todos.filter((item, index) => {
       if (item.id === itemId) {
-        // if (note.todos.length === 0) {
-        //   deleteNote(state, action.payload.parentId);
-        // }
-
         return false;
       }
 
@@ -26,6 +22,11 @@ const TodoItem = props => {
       .doc(todo.docId)
       .update({
         todos: filteredTodos
+      })
+      .then(res => {
+        if (filteredTodos.length === 0) {
+          removeNote();
+        }
       });
   };
 
